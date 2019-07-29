@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 智慧党建
 
 #### 项目介绍
@@ -55,6 +54,3 @@ src/assets 静态资源 css js
 
 
 2. css编写设计图尺寸一半，单位px，编译自动转rem
-=======
-# party_building
->>>>>>> 0ee266adc41dd2ee39de352e4c52906c229ae6e5
