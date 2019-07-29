@@ -1,0 +1,71 @@
+#app {
+  font-family: PingFangSC-Regular,Avenir,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50
+}
+
+html,
+body {
+  width: 100%;
+  color: #2c3e50;
+  margin: 0;
+  font-family: PingFangSC-Regular, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+html {
+  touch-action: manipulation; /*禁用双击*/
+}
+input[type='button'],
+input[type='submit'],
+input[type='search'],
+input[type='reset'] {
+  -webkit-appearance: none;
+}
+
+textarea {
+  -webkit-appearance: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-weight: normal;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  padding: 0;
+  list-style: none;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.news_content p{
+  font-size:18px;
+  padding: 0 16px !important;
+  text-align: justify;
+  line-height:25px;
+}

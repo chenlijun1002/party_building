@@ -1,0 +1,35 @@
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont/iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:24px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-formfull:before { content: "\e675"; }
+
+.icon-xiangxia:before { content: "\e640"; }
+
+.icon-book:before { content: "\e708"; }
+
+.icon-myfull:before { content: "\e604"; }
+
+.icon-noticefull:before { content: "\e619"; }
+
+.icon-leida:before { content: "\e6ce"; }
+
+.icon-leidafull:before { content: "\e620"; }
+
+.icon-form:before { content: "\e631"; }
+
+.icon-notice:before { content: "\e743"; }
+
+.icon-bookfull:before { content: "\e602"; }
+
+.icon-my:before { content: "\e734"; }
+
+.icon-chenggong:before { content: "\e60a"; }

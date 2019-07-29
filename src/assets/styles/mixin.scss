@@ -1,0 +1,159 @@
+$base:750/10;
+$colormain:#212121;
+$colornormal:#515151;
+$colorlow:#747474;
+$colortheme:#fb1438;
+
+// 背景图片地址和大小
+@mixin bis($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+//定位全屏
+@mixin allcover {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+//定位上下左右居中
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//定位上下居中
+@mixin ct {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//定位上下居中
+@mixin cl {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+//宽高
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+//字体大小、行高、字体
+@mixin font($size, $line-height, $family: 'Microsoft YaHei') {
+  font: #{$size}/#{$line-height} $family;
+}
+
+//字体大小，颜色
+@mixin sc($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+
+//flex 布局和 子元素 对其方式
+@mixin fj($type: space-between) {
+  display: flex;
+  justify-content: $type;
+}
+
+// 1px边框
+@mixin border-line($top, $right, $bottom, $left) {
+  content: '';
+  position: absolute;
+  left: $left;
+  right: $right;
+  top: $top;
+  bottom: $bottom;
+  background-color: #e0e0e0;
+
+  @if $top==auto or $bottom==auto {
+    height: 1px;
+    transform: scaleY(.5);
+  }
+
+  @else if $left==auto or $right==auto {
+    width: 1px;
+    transform: scaleX(.5);
+  }
+}
+
+.border-bottom {
+  position: relative;
+
+  &::before {
+    @include border-line(auto, 0, 0, 0)
+  }
+}
+
+.border-top {
+  position: relative;
+
+  &::before {
+    @include border-line(0, 0, auto, 0)
+  }
+}
+
+.border-left {
+  position: relative;
+
+  &::before {
+    @include border-line(0, auto, 0, 0)
+  }
+}
+
+.border-right {
+  position: relative;
+
+  &::before {
+    @include border-line(0, 0, 0, auto)
+  }
+}
+
+// 三角形箭头
+@mixin border-arrow($direction, $borderColor:$colornormal, $size:5px) {
+  content: "";
+  height: 0;
+  width: 0;
+
+  @if $direction==top {
+    border-bottom: $size solid $borderColor;
+    border-left: $size dashed transparent;
+    border-right: $size dashed transparent;
+  }
+
+  @else if $direction==right {
+    border-left: $size solid $borderColor;
+    border-top: $size dashed transparent;
+    border-bottom: $size dashed transparent;
+  }
+
+  @else if $direction==bottom {
+    border-top: $size solid $borderColor;
+    border-left: $size dashed transparent;
+    border-right: $size dashed transparent;
+  }
+
+  @else if $direction==left {
+    border-right: $size solid $borderColor;
+    border-top: $size dashed transparent;
+    border-bottom: $size dashed transparent;
+  }
+}
+
+
+// 多行省略
+@mixin multiline-overflow($line: 2) {
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
