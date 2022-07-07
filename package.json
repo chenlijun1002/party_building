@@ -20,7 +20,7 @@
     "html2canvas": "^1.0.0-alpha.12",
     "jquery": "^3.3.1",
     "mint-ui": "^2.2.13",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "signalr": "^2.3.0",
     "vue": "^2.5.16",
     "vue-awesome-swiper": "^3.1.3",
